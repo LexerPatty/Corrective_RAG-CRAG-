@@ -1,0 +1,42 @@
+"""
+🧠 Normal RAG = “Search → Read → Answer”
+🔎 Corrective RAG = “Search → Check if search is good → Fix if needed → Answer”
+
+
+What Corrective RAG Does :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Corrective RAG adds an extra verification step.
+
+Steps:
+1️⃣ User asks question
+2️⃣ Retrieve documents
+3️⃣ Check if retrieved docs are relevant or trustworthy
+4️⃣ If not good → re-retrieve or filter
+5️⃣ Then generate final answer
+
+So it reduces hallucination and wrong answers.
+
+Real Life Example (Very Simple):::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Imagine:
+You go to a medical store and ask:
+“I have a headache. What medicine should I take?”
+
+🧠 Normal RAG Shopkeeper:
+Quickly searches shelf
+Picks first headache medicine
+Gives it to you
+Doesn’t check expiry date
+Doesn’t check if it's for children or adults
+⚠️ Risky.
+
+
+
+🔎 Corrective RAG Shopkeeper:
+Searches medicine
+Checks:
+  Is this really for headache?
+  Is it expired?
+  Is dosage correct?
+If wrong → searches again
+Then gives correct medicine
+✅ Safer and smarter.
+"""
